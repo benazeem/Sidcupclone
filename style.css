@@ -1,0 +1,830 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    font-family: 'Montserrat';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+}
+
+.bgcrsr {
+    transition: all ease 0.4s;
+}
+
+#cursor {
+    height: 25px;
+    width: 25px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear 0.1s;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e42;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(70px);
+    z-index: 2;
+    transition: all linear 0.1s;
+}
+
+header {
+    background-color: transparent;
+    height: 160px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+
+}
+
+.upper,
+.lower {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 70%;
+    padding: 20px 0 0 100px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.hitem1 {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+    transition: all ease 0.4s;
+}
+
+.logo img {
+    transform: scale(1.1);
+    width: 95px;
+    transition: all ease 0.3s;
+}
+
+.logo:hover img{
+    transform: scale(1);
+}
+
+.hitem1:hover {
+    color: #95C11E;
+
+}
+
+.buttons {
+    position: absolute;
+    right: 3%;
+}
+
+button {
+    width: 165px;
+    height: 45px;
+    color: white;
+    border: green;
+    border: 3px solid #95C11E;
+    border-radius: 25px;
+    margin-right: 10px;
+    background-color: black;
+    font-size: medium;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -2;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.565);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.page1 h1 {
+    z-index: 3;
+    font-size: 90px;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    color: black;
+    position: absolute;
+    font-size: 90px;
+    font-weight: 900;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px rgb(134, 170, 36);
+    z-index: -1;
+}
+
+.page1 h4 {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.page1 p {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 52%;
+    text-align: center;
+}
+
+.pg1-arrow {
+    width: 65px;
+    height: 65px;
+    transform: scale(2.1);
+    border: 1px solid rgb(134, 170, 36);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.4s;
+}
+
+.fa-arrow-down {
+    font-size: 20px;
+}
+
+.pg1-arrow:hover{
+    transform: scale(1);
+    background-color: #95C11E;
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in h4 {
+    letter-spacing: 0.02em;
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-top: 20px;
+    transition: all linear 0.3s;
+    color: black;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.scroller-in h4:hover {
+    color: #95C11E;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.about {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-h {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.about-section {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+.about-us {
+    width: 48%;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.about-us p {
+    margin-top: 25px;
+}
+
+
+.left-figure {
+    background-image: url(/SIDCUP-GOLF/home-about-1.avif);
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+
+.figure::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.195);
+}
+
+.figure {
+    border-radius: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-figure {
+    background-image: url(/SIDCUP-GOLF/home-about-2.avif);
+    width: 130px;
+    height: 170px;
+    position: relative;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-white.svg");
+    background-repeat: no-repeat;
+    background-size: 165px 110px;
+    background-position: 6% 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.pag3-sections {
+    width: 27%;
+    height: 85%;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center top;
+    z-index: 11;
+}
+
+.pag3-sections::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.179);
+    position: absolute;
+    z-index: 11;
+}
+
+.pag3-sections h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0 0 25px 25px;
+}
+
+.pag3-sections h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 0 5px 25px;
+}
+
+.section1 {
+    background-image: url(/SIDCUP-GOLF/home-toptracer.avif);
+}
+
+.section2 {
+    background-image: url(/SIDCUP-GOLF/hero-4.webp);
+
+}
+
+.section3 {
+    background-image: url(/SIDCUP-GOLF/home-lessons.avif);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #b6de45;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    position: absolute;
+    z-index: 13;
+
+}
+
+.overlay h4 {
+    font-size: 30px;
+    margin-top: 70px;
+    padding: 25px;
+    font-weight: 900;
+    color: black;
+}
+
+.overlay p {
+    color: black;
+    line-height: 30px;
+    padding: 10px 30px 10px 30px;
+
+    width: 80%;
+    font-weight: 450;
+}
+
+.pag3-sections:hover .overlay {
+    opacity: 1;
+}
+
+.pag3-sections:hover .overlay .icon {
+    transform: scale(1.2);
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: transparent;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.6s;
+}
+
+.fa-arrow-right {
+    font-size: 30px;
+    color: black;
+}
+
+.icon:hover {
+    background-color: whitesmoke;
+}
+
+.signup {
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(to top right, #abdb28, #2b942b);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 12;
+    position: relative;
+}
+
+.signup-h {
+    width: 70%;
+    z-index: 12;
+}
+
+.signup-h h2 {
+    text-align: center;
+    color: black;
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.signup-lr {
+    height: 100%;
+    width: 15%;
+    object-fit: fill;
+    overflow: hidden;
+}
+
+.signup-lr img {
+    padding: 10px;
+}
+
+#image1 {
+    transform: scale(-1);
+}
+
+.page4 {
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+}
+
+.slider4 {
+    position: relative;
+    width: 50%;
+    border-radius: 10%;
+}
+
+.page4-info {
+    width: 50%;
+}
+
+.slider4 .swiper {
+    width: 100%;
+    height: 350px;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper .simg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5%;
+}
+
+.img1 {
+    background-image: url("/SIDCUP-GOLF/slider-1.avif");
+}
+
+.img2 {
+    background-image: url("/SIDCUP-GOLF/slider-2.avif");
+}
+
+.img3 {
+    background-image: url("/SIDCUP-GOLF/slider-3.avif");
+}
+
+.pag-bg {
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-white.svg");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    background-position: 1% 72%;
+    height: 55px;
+    width: 100%;
+    position: relative;
+}
+
+.swiper-custom-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 1rem;
+    position: absolute;
+    line-height: 29px;
+    color: black;
+    position: relative;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+    padding: 5px;
+    height: auto;
+    width: auto;
+    background-color: whitesmoke;
+    opacity: 0.7;
+    position: relative;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+    background: #95C11E;
+    position: relative;
+}
+
+.swiper-pagination-bullet-active::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    transform: translate(-12px,-12px);
+    border-radius: 100%;
+    border: 2px solid #95C11E;
+}
+
+.page4-info h2 {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0 0 10px 25px;
+}
+
+.page4-info p {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 20px 10px 10px 10px;
+    font-weight: 450;
+}
+
+.page4-info button {
+    margin-top: 20px;
+}
+
+.page6 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.review-container{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.small-cards-container{
+    width: 90%;
+    height: 35%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.review-container .slider5 {
+    width: 72%;
+}
+
+.quote-left , .quote-right {
+    width: 10%;
+    width: 50px;
+}
+
+.quote-left{
+    position: absolute;
+    top: 40px;
+    left: 70px;
+}
+
+.quote-right{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.swiper-2 .swiper-wrapper .swiper-slide p {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.cards-h h2 {
+    font-size: 65px;
+    font-weight: 900;
+    white-space: nowrap;
+    color: black;
+    font-family: "gilroy";
+    -webkit-text-stroke: 1.2px white;
+    text-align: center;
+    transition: all ease 0.6s;
+}
+
+.small-cards {
+    height: 35%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.sm-card {
+    width: 30%;
+    height: 125px;
+    border-radius: 20px;
+    transition: all ease 0.6s;
+    overflow: hidden;
+    position: relative;
+}
+
+.sm-card img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transform: scale(1.1);
+    object-fit: cover;
+    transition: all ease 0.6s;
+}
+
+.sm-card h2 {
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 25px ;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #b6e72e;
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+    z-index: 10;
+    transition: all ease 0.6s;
+}
+
+.sm-card:hover h2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.272);
+}
+
+.sm-card:hover img {
+    transform: scale(1);
+}
+
+.sm-card:hover + .cards-h h2 {
+    color: red;
+    -webkit-text-stroke: #95C11E;
+}
+
+footer {
+    height: 55vh;
+    width: 100%;
+    background-color: #95C11E;
+    margin-top: 10vh;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+}
+
+.footbg img {
+    position: absolute;
+    top: 40px;
+    height: 250px;
+    transform: scale(-1);
+} 
+
+.top-foot {
+    width: 90%;
+    height: 80%;
+    padding: 70px 100px;
+    z-index: 10;
+    display: flex;
+
+}
+
+.logo-social{
+    width: 15%;
+    position: inherit;
+    z-index: 12;
+}
+
+.logo-social .logo img{
+    transform: scale(1.3);
+}
+
+.logo-social .logo:hover img{
+    transform: scale(1.2);
+}
+
+.fa-brands {
+    font-size: 30px;
+    margin-top: 50px;
+    color: black;
+    position: relative;
+    margin-right: 10px;
+    transition: all ease 0.4s;
+}
+
+.fa-brands:hover {
+    color: white;
+}
+
+.left-menu, .right-menu {
+    width: 30%;
+    z-index: 12;
+}
+
+.address{
+    width: 20%;
+    z-index: 12;
+}
+
+.left-menu h2, .right-menu h2 {
+    width: auto;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 10px;
+    transition: all ease 0.4s;
+}
+
+
+.fitem1:hover {
+    color: white;
+}
+
+.address-map a, .telnum a{
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    transition: all ease 0.4s;
+}
+
+.address-map:hover a, .telnum:hover a {
+    color: white;
+}
+
+.address p {
+    color: black;
+    margin-bottom: 5px;
+}
+
+.low-foot {
+    width: 90%;
+    height: 10%;
+    padding: 0 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.low-foot p, .low-foot a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all ease 0.4s;
+}
+
+.low-foot a:hover {
+    color: white;
+}
